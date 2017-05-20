@@ -1,0 +1,20 @@
+<%= erb :_nav_bar %>
+<%= erb :'_errors' %>
+
+<div id="container">
+
+<h3>Login Below</h3>
+
+<form action="/sessions" method="post">
+
+    <label for="username">username </label>
+    <input id="username" name='username' type='text'/>
+
+    <label for="password">Password </label>
+    <input id="password" name='password_string' type='password'/>
+    <input class="button" type="submit" value="Login">
+
+  </form>
+  <br>
+  <a href="/users/new">Create Account</a>
+</div>
