@@ -3,10 +3,10 @@ get '/sessions' do
 end
 
 post '/sessions' do
-  login
-  if logged_in?
-    session[:id]
-    redirect "/users/#{@user.id}"
+  user = User.authenticate(params[:username], params[:password_string])
+  if user
+    login(user)
+    redirect "/users/#{user.id}"
   else
     @errors= ['Incorrect login information']
     erb :'/sessions/new'
