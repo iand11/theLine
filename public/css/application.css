@@ -80,6 +80,8 @@ body {
   background-color: white;
   margin-top:20px;
   border-radius: 10px;
+  /*background-color: transparent;*/
+  opacity: 0.6;
 }
 
 .search_box {
@@ -113,4 +115,32 @@ body {
   outline:none;
   border-radius: 6px;
 }
+
+/*.games_played{
+  width:150px;
+}*/
+
+.plate_appearances{
+  width:290px;
+}
+
+
+
+/*.hits{
+  width:190px;
+}
+
+.runs{
+  float:right;
+  padding-bottom:100px;
+}*/
+
+.stats{
+  margin-left: 5px;
+}
+/*
+.test{
+  background-color: white;
+  opacity: 0.5;
+}*/
 

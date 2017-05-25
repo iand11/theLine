@@ -15,18 +15,26 @@
 	<img src="https://unsplash.it/1900/1200?image=585">
 	<img src="https://unsplash.it/1900/1200?image=73">
 </div>
-
+<div class="test">
 <% if @player %>
 	<div class="results_box">
+		<div style="margin-left: 5px">
 		<h2 class="search_player"><b><%= @player["FirstName"] %> <%= @player["LastName"] %></b></h2>
 		<p class="jersey_number">Jersey Number: <%= @player["JerseyNumber"] %></p>
 		<p class="position">Position: <%= @player["Position"] %></p>
+		</div>
 		<h3 class="stats"><b>Statistics</b></h3>
-		  <p class="money_placed">Games Played: <%= @stats["GamesPlayed"]["#text"] %></p>
-    <p class="money_win">Number of Plate Appearances: <%= @stats["AtBats"]["#text"] %></p>
+		<div style="width: 40%; margin-left: 3px; float: left;">
+		  <p class="games_played">Games Played: <%= @stats["GamesPlayed"]["#text"] %></p>
+    <p class="plate_appearances">Number of Plate Appearances: <%= @stats["AtBats"]["#text"] %></p>
     <p class="hits">Number of Hits: <%= @stats["Hits"]["#text"] %></p>
+   </div>
+
+    <div style="width: 40%; float: right;" >
     <p class="runs">Number of Runs: <%= @stats["Runs"]["#text"] %></p>
     <p class="homeruns">Number of Homeruns: <%= @stats["Homeruns"]["#text"] %></p>
-    <p class="money_win">Batting Average: <%= batting_avg %></p>
+    <p class="batting_avg">Batting Average: <%= batting_avg %></p>
+    </div>
 	</div>
 <% end %>
+</div>
