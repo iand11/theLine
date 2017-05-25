@@ -1,0 +1,6 @@
+  <p class="money_placed">Games Played: <%= @player["GamesPlayed"]["#text"] %></p>
+    <p class="money_win">Number of Plate Appearances: <%= @stats["AtBats"]["#text"] %></p>
+    <p class="hits">Number of Hits: <%= @stats["Hits"]["#text"] %></p>
+    <p class="runs">Number of Runs: <%= @stats["Runs"]["#text"] %></p>
+    <p class="homeruns">Number of Homeruns: <%= @stats["Homeruns"]["#text"] %></p>
+    <p class="money_win">Batting Average: <%= batting_avg %></p>

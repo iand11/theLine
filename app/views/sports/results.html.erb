@@ -1,0 +1,22 @@
+<div id="slideshow">
+  <img src="https://unsplash.it/1900/1200?image=1058">
+  <img src="https://unsplash.it/1900/1200?image=585">
+  <img src="https://unsplash.it/1900/1200?image=73">
+</div>
+
+<% if @player %>
+  <div class="results_box">
+    <h2 class="search_player"><%= @player["FirstName"] %> <%= @player["LastName"] %></h2>
+    <p class="jersey_number">Jersey Number: <%= @player["JerseyNumber"] %></p>
+    <p class="position">Position: <%= @player["Position"] %></p>
+    <h4 class="stats">Statistics</h4>
+    <p class="money_placed">Games Played: <%= @player["GamesPlayed"]["#text"] %></p>
+    <p class="money_win">Number of Plate Appearances: <%= @stats["AtBats"]["#text"] %></p>
+    <p class="hits">Number of Hits: <%= @stats["Hits"]["#text"] %></p>
+    <p class="runs">Number of Runs: <%= @stats["Runs"]["#text"] %></p>
+    <p class="homeruns">Number of Homeruns: <%= @stats["Homeruns"]["#text"] %></p>
+    <p class="money_win">Batting Average: <%= batting_avg %></p>
+  </div>
+<% else %>
+  <h2>You must seach a valid player</h2>
+<% end %>

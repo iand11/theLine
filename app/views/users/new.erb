@@ -1,0 +1,20 @@
+<%= erb :_nav_bar %>
+<%= erb :'_errors' %>
+
+<div id="container">
+  <h1>Signup Below</h1>
+  <br>
+  <ul>
+  <form action='/users' method='post'>
+    <li><label for="first_name">First Name:</label>
+    <input class="input_text" type="text" name="user[first_name]"></li><br>
+    <li><label for="first_name">Last Name:</label>
+    <input class="input_text" type="text" name="user[last_name]"></li><br>
+    <li><label for="username">Username:</label>
+    <input class="input_text" type="text" name="user[username]"></li><br>
+    <li><label for="password_string">Password:</label>
+    <input class="input_text" type="password" name="password_string"></li><br>
+    <input class="input_text" class="button" type="submit" value="Signup">
+  </form>
+  </ul>
+</div>
