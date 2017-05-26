@@ -1,4 +1,3 @@
-<%= erb :_nav_bar %>
 <h1 class="title">theLine</h1>
 
 <div style="text-align: center; list-style: none;">
@@ -60,10 +59,12 @@
     <div style="width: 40%; margin-left: 15px; float: left;">
       <p class="games_played">Games Played: <b><%= @stats["GamesPlayed"]["#text"] %></b></p>
       <p class="hits">Field Goals Made: <b><%= @stats["Fg2PtMade"]["#text"] %></b></p>
+      <p class="hits">Field Goal Percentage: <b><%= fg_percentage %></b></p>
    </div>
 
     <div style="width: 40%; float: right;" >
     <p class="runs">3 Point Field Goals Made: <b><%= @stats["Fg3PtAtt"]["#text"] %></b></p>
+    <p class="hits">3 Point FG Percentage: <b><%= three_pt_percentage %></b></p>
     <p class="homeruns">Free Throws Made: <b><%= @stats["FtMade"]["#text"] %></b></p>
     </div>
   </div>
@@ -87,7 +88,6 @@
     <div style="width: 40%; float: right;" >
     <p class="homeruns">Rushing Touchdowns: <b><%= @stats["RushTD"]["#text"] %></b></p>
     <p class="homeruns">Receiving Yards: <b><%= @stats["RecYards"]["#text"] %></b></p>
-    <p class="runs">Receiving Yards: <b><%= @stats["RecYards"]["#text"] %></b></p>
     <p class="runs">Receiving Touchdowns: <b><%= @stats["RecTD"]["#text"] %></b></p>
     </div>
   </div>

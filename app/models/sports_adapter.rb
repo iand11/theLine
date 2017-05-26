@@ -1,7 +1,7 @@
 require 'HTTParty'
 
 class SportsAdapter
-  include HTTParty
+  # include HTTParty
 
   def search(player, league)
    if player.include? " "
