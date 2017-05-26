@@ -1,6 +1,9 @@
-<%= erb :_nav_bar %>
 
 <h1 class="title">theLine</h1>
+
+<div style="text-align: center; list-style: none;">
+<%= erb :'_errors' %>
+</div>
 
 <div class="search_box">
 <div class="search_box_contents">
@@ -22,21 +25,21 @@
 	<div class="results_box">
 		<div style="margin-left: 5px">
 		<h2 class="search_player"><b><%= @player["FirstName"] %> <%= @player["LastName"] %></b></h2>
-		<p class="jersey_number">Jersey Number: <%= @player["JerseyNumber"] %></p>
-		<p class="position">Position: <%= @player["Position"] %></p>
-		<p class="team_name">Team: <%= @results["team"]["City"] %> <%= @results["team"]["Name"] %></p>
+		<p class="jersey_number">Jersey Number: <b><%= @player["JerseyNumber"] %></b></p>
+		<p class="position">Position: <b><%= @player["Position"] %></b></p>
+		<p class="team_name">Team: <b><%= @results["team"]["City"] %> <%= @results["team"]["Name"] %></b></p>
 		</div>
 		<h3 class="stats"><b>Statistics</b></h3>
 		<div style="width: 40%; margin-left: 3px; float: left;">
-		  <p class="games_played">Games Played: <%= @stats["GamesPlayed"]["#text"] %></p>
-    <p class="plate_appearances">Number of Plate Appearances: <%= @stats["AtBats"]["#text"] %></p>
-    <p class="hits">Number of Hits: <%= @stats["Hits"]["#text"] %></p>
+		  <p class="games_played">Games Played: <b><%= @stats["GamesPlayed"]["#text"] %></b></p>
+    <p class="plate_appearances">Number of Plate Appearances: <b><%= @stats["AtBats"]["#text"] %></b></p>
+    <p class="hits">Number of Hits: <b><%= @stats["Hits"]["#text"] %></b></p>
    </div>
 
     <div style="width: 40%; float: right;" >
-    <p class="runs">Number of Runs: <%= @stats["Runs"]["#text"] %></p>
-    <p class="homeruns">Number of Homeruns: <%= @stats["Homeruns"]["#text"] %></p>
-    <p class="batting_avg">Batting Average: <%= batting_avg %></p>
+    <p class="runs">Number of Runs: <b><%= @stats["Runs"]["#text"] %></b></p>
+    <p class="homeruns">Number of Homeruns: <b><%= @stats["Homeruns"]["#text"] %></b></p>
+    <p class="batting_avg">Batting Average: <b><%= batting_avg %></b></p>
     </div>
 	</div>
 <% end %>

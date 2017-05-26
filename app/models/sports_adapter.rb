@@ -9,8 +9,6 @@ class SportsAdapter
   else
     player_name = search_string
   end
-    
-    # team_name = search_string
 
     my_query = {
         "player" => player_name
@@ -45,7 +43,11 @@ class SportsAdapter
     else
       request = "Choose correct type"
     end
-    request.parsed_response["cumulativeplayerstats"]["playerstatsentry"][0]
+    if request.parsed_response["cumulativeplayerstats"]["playerstatsentry"] == nil
+      return nil
+    else
+      request.parsed_response["cumulativeplayerstats"]["playerstatsentry"][0]
+    end
   end
 
 end
