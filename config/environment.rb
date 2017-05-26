@@ -20,7 +20,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
-require 'pry-byebug'
+require 'pry-byebug' if development?
 require 'dotenv'
 Dotenv.load
 
