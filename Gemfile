@@ -16,7 +16,7 @@ gem 'bcrypt'
 gem 'shotgun', '~>0.9.1'
 gem 'dotenv'
 
-
+gem 'twilio-ruby'
 gem 'rake'
 gem 'bcrypt'
 gem 'shotgun', '~>0.9.1'
