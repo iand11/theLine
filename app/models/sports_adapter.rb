@@ -1,8 +1,6 @@
 require 'HTTParty'
 
 class SportsAdapter
-  # include HTTParty
-
   def search(player, league)
    if player.include? " "
     player_name = player.split(" ").join("-")
