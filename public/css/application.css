@@ -69,7 +69,7 @@ body {
 .search_box {
   background-color: white;
   margin:auto;
-  width:36%;
+  width:39%;
   border-radius: 6px;
   text-align:center;
 }
@@ -108,6 +108,15 @@ body {
 
 li {
   list-style: none;
+}
+
+.search_options{
+  float: left;
+  border:none;
+  margin-top:13px;
+  margin-left: 10px;
+  outline:none;
+  background-color: white;
 }
 
 
