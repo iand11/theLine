@@ -7,10 +7,8 @@ body {
   padding-left: 1em;
   padding-right: 1em;
 
-  /*border-right: 1px solid;*/
 
   border-right: 1px solid;
-
   float: right;
   color: white;
 }
@@ -48,7 +46,6 @@ body {
 .title {
   width:30%;
   width:100%;
-
   margin:auto;
   color:#fff;
   text-align:center;
@@ -57,45 +54,6 @@ body {
   padding-left:20px;
   padding-bottom:150px;
 }
-
-/*.search_form{
-  margin:120px 0 0 400px;
-
-}*/
-
-/*.search_field {
-=======
-}
-
-.search_form{
-  margin:120px 0 0 400px;
-
-}
-
-.search_field {
->>>>>>> 0c70b704fda175969385e4105c6abf98a446c8c6
-  width:50%;
-  height:50px;
-  background-color:white;
-  font-size: 180%;
-  border:none;
-  background-image: url('searchicon.png');
-  border-radius: 10px;
-<<<<<<< HEAD
-}*/
-
-/*.search_button{
-=======
-}
-
-.search_button{
->>>>>>> 0c70b704fda175969385e4105c6abf98a446c8c6
- border-radius: 10px;
- width:70px;
- height:50px;
- padding-bottom:2px;
-<<<<<<< HEAD
-}*/
 
 
 
@@ -106,9 +64,8 @@ body {
   background-color: white;
   margin-top:20px;
   border-radius: 10px;
-
-  /*background-color: transparent;*/
   opacity: 0.7;
+
 }
 
 .search_box {
@@ -143,35 +100,16 @@ body {
   border-radius: 6px;
 }
 
-/*.games_played{
-  width:150px;
-}*/
-
 .plate_appearances{
   width:290px;
 }
 
-
-
-/*.hits{
-  width:190px;
-}
-
-.runs{
-  float:right;
-  padding-bottom:100px;
-}*/
-
 .stats{
   margin-left: 5px;
 }
-/*
-.test{
-  background-color: white;
-  opacity: 0.5;
-}*/
 
 li {
   list-style: none;
 }
+
 
