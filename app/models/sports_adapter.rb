@@ -1,5 +1,3 @@
-require 'HTTParty'
-
 class SportsAdapter
   def search(player, league)
    if player.include? " "

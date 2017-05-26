@@ -22,6 +22,8 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'pry-byebug' if development?
 require 'dotenv'
+require 'HTTParty'
+
 Dotenv.load
 
 
