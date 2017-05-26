@@ -3,21 +3,20 @@ require 'HTTParty'
 class SportsAdapter
   include HTTParty
 
-  def search(search_string)
-   if search_string.include? " "
-    player_name = search_string.split(" ").reverse.join(",")
+  def search(player, league)
+   if player.include? " "
+    player_name = player.split(" ").join("-")
   else
-    player_name = search_string
+    player_name = player
   end
 
     my_query = {
-        "player" => player_name
-        # "team" => team_name  
+        "player" => player_name 
     }
     
 
     # @sports_type = params[:sports_type]
-    sports_type = "mlb"
+    sports_type = league
 
 
     if sports_type == "nfl"
@@ -43,7 +42,7 @@ class SportsAdapter
     else
       request = "Choose correct type"
     end
-    if request.parsed_response["cumulativeplayerstats"]["playerstatsentry"] == nil
+    if player_name == "" || request.parsed_response["cumulativeplayerstats"]["playerstatsentry"] == nil
       return nil
     else
       request.parsed_response["cumulativeplayerstats"]["playerstatsentry"][0]

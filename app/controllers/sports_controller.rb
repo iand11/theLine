@@ -1,8 +1,9 @@
 post '/sports/search' do 
-  search_string = params[:player_name]
-  @results = SportsAdapter.new.search(search_string)
+  player = params[:player_name]
+  @league = params[:league]
+  @results = SportsAdapter.new.search(player, @league)
   if @results == nil
-    @errors = ['Incorrect spelling of player name!']
+    @errors = ['Incorrect spelling of player name or wrong league search!']
     erb :index
   else
     @player = @results["player"]

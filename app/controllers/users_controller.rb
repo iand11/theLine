@@ -7,7 +7,7 @@ post "/users" do
   user.password= params[:password_string]
   if user.save
     login(user)
-    redirect "/users/#{user.id}"
+    redirect "/"
   else
     status 422
     @errors = user.errors.full_messages

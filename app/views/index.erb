@@ -1,4 +1,4 @@
-
+<%= erb :_nav_bar %>
 <h1 class="title">theLine</h1>
 
 <div style="text-align: center; list-style: none;">
@@ -7,8 +7,14 @@
 
 <div class="search_box">
 <div class="search_box_contents">
+
 <form class="search_form" action="/sports/search" method="post">
-	<input class="search_field" type="text" name="player_name" placeholder="Mike Trout">
+<select name="league" style="float: left;">
+  <option value="mlb">mlb</option>
+  <option value="nfl">nfl</option>
+  <option value="nba">nba</option>
+</select>
+	<input class="search_field" type="text" name="player_name" placeholder="ex: Mike Trout">
 	<input class="search_button" type="submit" value="search">
 </form>
 </div>
@@ -16,21 +22,21 @@
 
 
 <div id="slideshow">
-	<img src="https://unsplash.it/1900/1200?image=1058">
-	<img src="https://unsplash.it/1900/1200?image=585">
-	<img src="https://unsplash.it/1900/1200?image=73">
+  <img src="https://unsplash.it/1900/1200?image=585">
+  <img src="https://unsplash.it/1900/1200?image=73">
+  <img src="https://unsplash.it/1900/1200?image=1058"> 
 </div>
 
-<% if @player %>
+<% if @player && @league == "mlb" %>
 	<div class="results_box">
-		<div style="margin-left: 5px">
+		<div style="margin-left: 15px">
 		<h2 class="search_player"><b><%= @player["FirstName"] %> <%= @player["LastName"] %></b></h2>
 		<p class="jersey_number">Jersey Number: <b><%= @player["JerseyNumber"] %></b></p>
 		<p class="position">Position: <b><%= @player["Position"] %></b></p>
 		<p class="team_name">Team: <b><%= @results["team"]["City"] %> <%= @results["team"]["Name"] %></b></p>
 		</div>
-		<h3 class="stats"><b>Statistics</b></h3>
-		<div style="width: 40%; margin-left: 3px; float: left;">
+		<h3 style="margin-left: 15px;" class="stats"><b>Statistics</b></h3>
+		<div style="width: 40%; margin-left: 15px; float: left;">
 		  <p class="games_played">Games Played: <b><%= @stats["GamesPlayed"]["#text"] %></b></p>
     <p class="plate_appearances">Number of Plate Appearances: <b><%= @stats["AtBats"]["#text"] %></b></p>
     <p class="hits">Number of Hits: <b><%= @stats["Hits"]["#text"] %></b></p>
@@ -42,4 +48,48 @@
     <p class="batting_avg">Batting Average: <b><%= batting_avg %></b></p>
     </div>
 	</div>
+
+  <% elsif @player && @league == "nba" %>
+  <div class="results_box">
+    <div style="margin-left: 15px">
+    <h2 class="search_player"><b><%= @player["FirstName"] %> <%= @player["LastName"] %></b></h2>
+    <p class="jersey_number">Jersey Number: <b><%= @player["JerseyNumber"] %></b></p>
+    <p class="position">Position: <b><%= @player["Position"] %></b></p>
+    <p class="team_name">Team: <b><%= @results["team"]["City"] %> <%= @results["team"]["Name"] %></b></p>
+    </div>
+    <h3 style="margin-left: 15px;" class="stats"><b>Statistics</b></h3>
+    <div style="width: 40%; margin-left: 15px; float: left;">
+      <p class="games_played">Games Played: <b><%= @stats["GamesPlayed"]["#text"] %></b></p>
+      <p class="hits">Field Goals Made: <b><%= @stats["Fg2PtMade"]["#text"] %></b></p>
+   </div>
+
+    <div style="width: 40%; float: right;" >
+    <p class="runs">3 Point Field Goals Made: <b><%= @stats["Fg3PtAtt"]["#text"] %></b></p>
+    <p class="homeruns">Free Throws Made: <b><%= @stats["FtMade"]["#text"] %></b></p>
+    </div>
+  </div>
+
+  <% elsif @player && @league == "nfl" %>
+  <div style="height: 370px;" class="results_box">
+    <div style="margin-left: 15px">
+    <h2 class="search_player"><b><%= @player["FirstName"] %> <%= @player["LastName"] %></b></h2>
+    <p class="jersey_number">Jersey Number: <b><%= @player["JerseyNumber"] %></b></p>
+    <p class="position">Position: <b><%= @player["Position"] %></b></p>
+    <p class="team_name">Team: <b><%= @results["team"]["City"] %> <%= @results["team"]["Name"] %></b></p>
+    </div>
+    <h3 style="margin-left: 15px;" class="stats"><b>Statistics</b></h3>
+    <div style="width: 40%; margin-left: 15px; float: left;">
+      <p class="games_played">Games Played: <b><%= @stats["GamesPlayed"]["#text"] %></b></p>
+      <p class="hits">Passing Yards: <b><%= @stats["PassYards"]["#text"] %></b></p>
+      <p class="hits">Passing Touchdowns: <b><%= @stats["PassTD"]["#text"] %></b></p>
+      <p class="runs">Rushing Yards: <b><%= @stats["RushYards"]["#text"] %></b></p>
+   </div>
+
+    <div style="width: 40%; float: right;" >
+    <p class="homeruns">Rushing Touchdowns: <b><%= @stats["RushTD"]["#text"] %></b></p>
+    <p class="homeruns">Receiving Yards: <b><%= @stats["RecYards"]["#text"] %></b></p>
+    <p class="runs">Receiving Yards: <b><%= @stats["RecYards"]["#text"] %></b></p>
+    <p class="runs">Receiving Touchdowns: <b><%= @stats["RecTD"]["#text"] %></b></p>
+    </div>
+  </div>
 <% end %>
