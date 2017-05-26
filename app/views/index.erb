@@ -1,6 +1,7 @@
 <%= erb :_nav_bar %>
 
 <h1 class="title">theLine</h1>
+
 <div class="search_box">
 <div class="search_box_contents">
 <form class="search_form" action="/sports/search" method="post">
@@ -10,12 +11,13 @@
 </div>
 </div>
 
+
 <div id="slideshow">
 	<img src="https://unsplash.it/1900/1200?image=1058">
 	<img src="https://unsplash.it/1900/1200?image=585">
 	<img src="https://unsplash.it/1900/1200?image=73">
 </div>
-<div class="test">
+
 <% if @player %>
 	<div class="results_box">
 		<div style="margin-left: 5px">
@@ -37,4 +39,3 @@
     </div>
 	</div>
 <% end %>
-</div>

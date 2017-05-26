@@ -1,7 +1,9 @@
 $(document).ready(function() {
 	slideshow();
+
 	// $(".results_box").hide();
 	// searchButtonListener();
+
 });
 
 
