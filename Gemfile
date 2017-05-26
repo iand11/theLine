@@ -20,6 +20,7 @@ gem 'twilio-ruby'
 gem 'rake'
 gem 'bcrypt'
 gem 'shotgun', '~>0.9.1'
+gem 'pry-byebug'
 
 
 group :test do

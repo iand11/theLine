@@ -38,7 +38,7 @@ body {
 }
 
 .errors {
-  color: red;
+  color: #ff1a1a;
 }
 
 .title {
@@ -118,5 +118,21 @@ li {
   outline:none;
   background-color: white;
 }
+
+/*@media screen and (max-width: 800px) {
+ main {
+     max-width: 100%;
+
+ }
+}
+
+@media screen and (max-width: 800px) {
+ div, nav {
+     display: block;
+     max-width: 100%;
+     text-align: center;
+     padding-top:30px;
+  }
+}*/
 
 

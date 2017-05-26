@@ -8,7 +8,7 @@
 <div class="search_box_contents">
 
 <form class="search_form" action="/sports/search" method="post">
-<select class="search_options" name="league">
+<select class="search_options" name="league"> 
   <option value="mlb">mlb</option>
   <option value="nfl">nfl</option>
   <option value="nba">nba</option>
@@ -20,8 +20,9 @@
 </div>
 
 <div id="slideshow">
-  <img src="https://unsplash.it/1900/1200?image=585">
   <img src="https://unsplash.it/1900/1200?image=73">
+  <img src="https://unsplash.com/search/basketball?photo=WJRZNL7rDF8">
+  <img src="https://unsplash.it/1900/1200?image=585">
   <img src="https://unsplash.it/1900/1200?image=1058"> 
 </div>
 
@@ -59,10 +60,12 @@
     <div style="width: 40%; margin-left: 15px; float: left;">
       <p class="games_played">Games Played: <b><%= @stats["GamesPlayed"]["#text"] %></b></p>
       <p class="hits">Field Goals Made: <b><%= @stats["Fg2PtMade"]["#text"] %></b></p>
+      <p class="hits">Field Goal Percentage: <b><%= fg_percentage %></b></p>
    </div>
 
     <div style="width: 40%; float: right;" >
     <p class="runs">3 Point Field Goals Made: <b><%= @stats["Fg3PtAtt"]["#text"] %></b></p>
+    <p class="hits">3 Point FG Percentage: <b><%= three_pt_percentage %></b></p>
     <p class="homeruns">Free Throws Made: <b><%= @stats["FtMade"]["#text"] %></b></p>
     </div>
   </div>
@@ -86,7 +89,6 @@
     <div style="width: 40%; float: right;" >
     <p class="homeruns">Rushing Touchdowns: <b><%= @stats["RushTD"]["#text"] %></b></p>
     <p class="homeruns">Receiving Yards: <b><%= @stats["RecYards"]["#text"] %></b></p>
-    <p class="runs">Receiving Yards: <b><%= @stats["RecYards"]["#text"] %></b></p>
     <p class="runs">Receiving Touchdowns: <b><%= @stats["RecTD"]["#text"] %></b></p>
     </div>
   </div>

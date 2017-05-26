@@ -1,8 +1,4 @@
-require 'HTTParty'
-
 class SportsAdapter
-  include HTTParty
-
   def search(player, league)
    if player.include? " "
     player_name = player.split(" ").join("-")
@@ -14,8 +10,6 @@ class SportsAdapter
         "player" => player_name 
     }
     
-
-    # @sports_type = params[:sports_type]
     sports_type = league
 
 
@@ -23,11 +17,6 @@ class SportsAdapter
       request = HTTParty.get('https://www.mysportsfeeds.com/api/feed/pull/nfl/2016-regular/cumulative_player_stats.json?playerstats=Att,Comp,Yds,TD',
                              :headers =>{'Content-Type' => 'application/json' , 'authorization' => ENV['API_AUTH_KEY']},
                              :query => my_query)
-
-    elsif sports_type == "nhl"
-      request = HTTParty.get('https://www.mysportsfeeds.com/api/feed/pull/nhl/2016-regular/cumulative_player_stats.json?playerstats=G,A,Pts,Sh',
-                            :headers =>{'Content-Type' => 'application/json' , 'authorization' => ENV['API_AUTH_KEY']},
-                            :query => my_query )
 
     elsif sports_type == "nba"
       request = HTTParty.get("https://www.mysportsfeeds.com/api/feed/pull/nba/2016-regular/cumulative_player_stats.json?playerstats=2PA,2PM,3PA,3PM,FTA,FTM",
