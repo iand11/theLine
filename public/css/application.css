@@ -62,14 +62,14 @@ body {
   background-color: white;
   margin-top:20px;
   border-radius: 10px;
-  opacity: 0.7;
+  opacity: 0.9;
 
 }
 
 .search_box {
   background-color: white;
   margin:auto;
-  width:39%;
+  width:25em;
   border-radius: 6px;
   text-align:center;
 }
@@ -82,7 +82,6 @@ body {
 }
 
 .search_button{
-  margin:auto;
   border:none;
   background-color: white;
   height:50px;
@@ -92,7 +91,7 @@ body {
 }
 
 .search_field{
-  width:350px;
+  width:250px;
   border:none;
   outline:none;
   border-radius: 6px;
@@ -119,20 +118,6 @@ li {
   background-color: white;
 }
 
-/*@media screen and (max-width: 800px) {
- main {
-     max-width: 100%;
 
- }
-}
-
-@media screen and (max-width: 800px) {
- div, nav {
-     display: block;
-     max-width: 100%;
-     text-align: center;
-     padding-top:30px;
-  }
-}*/
 
 
