@@ -8,7 +8,7 @@ The Line is a web application that allows the user to search for an athlete's na
 ![alt text](readme_images/theline-search-results.png?raw=true)
 
 ## Deployment
-https://the-player-line.herokuapp.com Edit
+https://the-player-line.herokuapp.com
 
 
 ## Tech Stack
