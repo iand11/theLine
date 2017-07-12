@@ -2,7 +2,10 @@
 The Line is a web application that allows the user to search for an athlete's name and it returns that athlete's statistics from the most recent year. The user can choose from either the NFL, NBA, or MLB. 
 
 ## Home Page
-![alt text](readme_images/personal-bog-home.png?raw=true)
+![alt text](readme_images/theline-homepage.png?raw=true)
+
+## Search Results
+![alt text](readme_images/theline-search-results.png?raw=true)
 
 ## Deployment
 https://the-player-line.herokuapp.com Edit
