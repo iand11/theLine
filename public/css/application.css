@@ -1,5 +1,5 @@
 body {
-	background: #000;
+  background: #000;
 }
 
 .nav-bar {
@@ -11,15 +11,16 @@ body {
   color: white;
 }
 
-#slideshow, img { 
-  min-height: 100%; 
-  min-width: 1024px; 
-  width: 100%; 
-  height: auto; 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  z-index:-9999; 
+#slideshow,
+img {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
 }
 
 #container {
@@ -42,66 +43,62 @@ body {
 }
 
 .title {
-  width:30%;
-  width:100%;
-  margin:auto;
-  color:#fff;
-  text-align:center;
+  width: 30%;
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  text-align: center;
   font-size: 400%;
 
-  padding-left:20px;
-  padding-bottom:150px;
+  padding-left: 20px;
+  padding-bottom: 150px;
 }
 
-
-
-.results_box{
-  margin:auto;
-  height:350px;
+.results_box {
+  margin: auto;
+  height: 350px;
   width: 600px;
   background-color: white;
-  margin-top:20px;
+  margin-top: 20px;
   border-radius: 10px;
   opacity: 0.9;
-
 }
 
 .search_box {
   background-color: white;
-  margin:auto;
-  width:25em;
+  margin: auto;
+  width: 25em;
   border-radius: 6px;
-  text-align:center;
+  text-align: center;
 }
 
-.search_form{
-  margin:auto;
-  height:50px;
-  font-size:110%;
-
+.search_form {
+  margin: auto;
+  height: 50px;
+  font-size: 110%;
 }
 
-.search_button{
-  border:none;
+.search_button {
+  border: none;
   background-color: white;
-  height:50px;
-  font-size:110%;
+  height: 50px;
+  font-size: 110%;
   border-radius: 6px;
-  outline:none;
+  outline: none;
 }
 
-.search_field{
-  width:250px;
-  border:none;
-  outline:none;
+.search_field {
+  width: 250px;
+  border: none;
+  outline: none;
   border-radius: 6px;
 }
 
-.plate_appearances{
-  width:290px;
+.plate_appearances {
+  width: 290px;
 }
 
-.stats{
+.stats {
   margin-left: 5px;
 }
 
@@ -109,15 +106,11 @@ li {
   list-style: none;
 }
 
-.search_options{
+.search_options {
   float: left;
-  border:none;
-  margin-top:13px;
+  border: none;
+  margin-top: 13px;
   margin-left: 10px;
-  outline:none;
+  outline: none;
   background-color: white;
 }
-
-
-
-
